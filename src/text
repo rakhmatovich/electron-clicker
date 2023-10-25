@@ -1,0 +1,31 @@
+"scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps && node_modules/.bin/electron-rebuild --module-dir ."
+  },
+
+  "dependencies": {
+    "electron": "^11.1.0",
+    "robotjs": "^0.6.0"
+  },
+
+
+"build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "my-app-uninstaller",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": false
+    }
+  },

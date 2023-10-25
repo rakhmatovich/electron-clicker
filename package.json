@@ -1,0 +1,53 @@
+{
+  "name": "clicker",
+  "productName": "clicker",
+  "version": "0.0.3",
+  "description": "application for clicking at time you want",
+  "main": "src/index.js",
+  "build": {
+    "appId": "clicker",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "uninstallDisplayName": "clicker-uninstaller",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps && node_modules/.bin/electron-rebuild --module-dir ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "rakhmatovich",
+    "email": "nurmuxammadrahmatov@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "robotjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron-builder": "^24.6.4",
+    "electron": "^11.1.0"
+  }
+}

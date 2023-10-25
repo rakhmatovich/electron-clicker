@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clicker</title>
+    <style>
+        body {
+            background-color: #ececec;
+            font-family: sans-serif;
+        }
+
+        form {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input {
+            border: 1px solid #000;
+            padding: 8px 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 8px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        textarea:focus, input:focus {
+            outline: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label for="minute">Minutes</label>
+    <input type="number" max="59" id="minute">
+    <label for="second">Seconds</label>
+    <input type="number" max="60" id="second">
+    <label for="mlsSec">Milliseconds</label>
+    <input type="number" max="999" id="mlsSec">
+    <button id="button">Submit</button>
+</form>
+<h1 id="text"></h1>
+</body>
+<script src="../src/renderer.js"></script>
+</html>
